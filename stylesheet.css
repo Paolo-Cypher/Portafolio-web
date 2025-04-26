@@ -1,0 +1,286 @@
+/* Estilo general para la página */
+body {
+    background-color: #DEDFDE;
+    background-image: url('img/pawel-czerwinski-9F7jaFSCAO4-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Estilo para el header */
+header {
+    width: 100%;
+    padding: 30px;
+    padding-top: 55px;
+    padding-left: 10px;
+    background-color: #DAC68B;
+    color: #333333;
+}
+
+h1, h2, h3 {
+    font-family: 'justify 25', sans-serif;
+    font-size: 40px;
+}
+
+/* Contenedor del header con flexbox */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilo para la imagen en el header */
+.image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.imagen-peque {
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+}
+
+/* Estilo de las secciones */
+.Perfil, .cursos, .experiencias, .habilidades-tec, .Redes, .habilidades-bla, .idiomas {
+    padding: 20px;
+    color: #333333;
+}
+
+.Perfil {
+    background-color: #A9D9A3;
+}
+
+.cursos {
+    background-color: #C4D9A3;
+}
+
+.experiencias {
+    background-color: #DBCCB2;
+}
+
+.Redes {
+    background-color: #f2f2f2;
+}
+
+.habilidades-tec, .habilidades-bla {
+    background-color: #B7D991;
+}
+
+.idiomas {
+    background-color: #A3D9B0;
+}
+
+/* Mejorar la apariencia de los párrafos */
+p, li {
+    font-size: 30px;
+    margin: 50px 0;
+    text-align: justify;
+}
+
+/* Listas dentro de las secciones */
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Estilo para las secciones */
+section {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+footer {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Modo alto contraste */
+body.alto-contraste {
+    background-color: #000 !important;
+    background-image: url('img/oscuro.jpg') !important;
+    color: #fff !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste .Perfil,
+body.alto-contraste .cursos,
+body.alto-contraste .experiencias,
+body.alto-contraste .Redes,
+body.alto-contraste .habilidades-tec,
+body.alto-contraste .habilidades-bla,
+body.alto-contraste .idiomas,
+body.alto-contraste footer {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* Estilo para el switch de modo nocturno */
+.switch {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch .slider {
+    background-color: #0d0e0d;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch .slider:before {
+    content: '🌙';  /* Icono de luna para el modo nocturno */
+    font-size: 20px;
+}
+
+/* Estilo activo cuando está en modo oscuro */
+body.alto-contraste .switch .slider {
+    background-color: #ffffff;
+    color: #000;
+}
+
+body.alto-contraste .switch .slider:before {
+    content: '🌞';  /* Icono de sol para el modo diurno */
+}
+
+/* Estilo activo cuando está en modo oscuro */
+body.alto-contraste .switch .slider {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Estilos generales para el botón de lectura */
+.boton-lectura {
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #2a9df4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+}
+
+.boton-lectura:hover {
+    background-color: #1d7dc4;
+}
+
+/* Media Queries para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    /* Ajustar el tamaño de las imágenes */
+    .image-container img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Ajuste para el contenido del header */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustar la fuente */
+    body {
+        font-size: 16px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.4rem;
+    }
+
+    /* Ajuste de las secciones */
+    section {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    /* Cambiar los márgenes para no verse sobrecargado */
+    p, li {
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+
+    /* Hacer que las listas se alineen bien */
+    ul {
+        padding-left: 20px;
+    }
+
+    /* Mejorar el tamaño de los enlaces */
+    a {
+        font-size: 1rem;
+    }
+
+    .switch {
+        top: 20px;
+        right: 20px;
+        font-size: 1rem;
+    }
+
+    /* Ajustes de la imagen pequeña */
+    .imagen-peque {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Ajuste de colores del fondo de las secciones */
+    .Perfil, .cursos, .experiencias, .habilidades-tec, .Redes, .habilidades-bla, .idiomas {
+        padding: 10px;
+    }
+}
+
+/* Media Queries para pantallas más grandes (hasta 1200px) */
+@media (max-width: 1200px) {
+    .header-content {
+        flex-direction: row;
+    }
+
+    .text {
+        margin-right: 20px;
+    }
+
+    /* Adaptar tamaño de fuente para pantallas intermedias */
+    body {
+        font-size: 18px;
+    }
+}
